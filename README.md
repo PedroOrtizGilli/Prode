@@ -21,10 +21,12 @@ Aplicación para armar y gestionar **pronósticos de carreras de Fórmula 1** en
 
 ## 🏗️ Arquitectura
 
+```` ```text ````
 ├── frontend/
 │   └── Prode/
 └── backend/
     └── prode-api/ 
+```` ``` ````
 
 ### Fuentes de datos
 
