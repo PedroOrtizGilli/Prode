@@ -14,15 +14,15 @@ Aplicación para armar y gestionar **pronósticos de carreras de Fórmula 1** en
 
 | Capa | Tecnología |
 |------|-----------|
-| Frontend | React |
-| Backend | Node.js / Express |
+| Frontend | Angular |
+| Backend | Nest.Js |
 | Datos de carrera | [OpenF1 API](https://openf1.org) |
 | Noticias | [RSS2JSON](https://rss2json.com) + feed oficial de [Formula1.com](https://www.formula1.com/en/latest/all.xml) |
 
 ## 🏗️ Arquitectura
 
-| frontend | Angular |
-| backend | Nest.Js |
+| Frontend | # SPA con Angular |
+| Backend | prode-api/ # API REST |
 
 ### Fuentes de datos
 
@@ -36,15 +36,15 @@ Aplicación para armar y gestionar **pronósticos de carreras de Fórmula 1** en
 ```bash
 cd backend/prode-api
 npm install
-cp .env.example .env   # configurar variables
-npm run dev
+cp .env.example .env
+npm run start:dev
 ```
 
 ### Frontend
 ```bash
 cd frontend/Prode
 npm install
-npm run dev
+npm start
 ```
 
 ## 🔮 Visión
