@@ -1,0 +1,21 @@
+<nav class="navbar">
+
+    <div class="nav-links">
+        <a routerLink="/" class="nav-title">Prode</a>
+
+        <a routerLink="/crear-prode" *ngIf="estaLogueado()" routerLinkActive="active">Crear Prode</a>
+        <a routerLink="/unirse-prode" *ngIf="estaLogueado()" routerLinkActive="active">Unirse Prode</a>
+        <a routerLink="/ver-prode" *ngIf="estaLogueado()" routerLinkActive="active">Ver Prode</a>
+        <a routerLink="/mi-perfil" *ngIf="estaLogueado()" routerLinkActive="active">Perfil</a>
+
+        <a *ngIf="esAdmin()" routerLink="/dashboard/usuarios" routerLinkActive="active">Usuarios</a>
+        <a *ngIf="esAdmin()" routerLink="/dashboard/estadisticas" routerLinkActive="active">Estadísticas</a>
+
+        <a routerLink="/login" *ngIf="!estaLogueado()" routerLinkActive="active" class="btn-nav-login">Login</a>
+        <a routerLink="/registro" *ngIf="!estaLogueado()" routerLinkActive="active" class="btn-nav-registro">Registrarse</a>
+
+        <button class="btn-logout" *ngIf="estaLogueado()" (click)="logout()">
+        Cerrar Sesión
+        </button>
+    </div>
+</nav>

@@ -1,0 +1,124 @@
+/* navbar.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700;900&display=swap');
+
+.navbar {
+  background: #15151e;
+  border-bottom: 3px solid #e10600;
+  padding: 0.75rem 2rem;
+  font-family: 'Titillium Web', sans-serif;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+.nav-title {
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 5rem;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-right: auto;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  padding: 0.5rem 1rem;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 0.15rem;
+  height: 2px;
+  background: #e10600;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: #e10600;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  transform: scaleX(1);
+}
+
+.nav-links a.active {
+  color: #e10600;
+}
+
+.btn-nav-login,
+.btn-nav-registro {
+  border: 2px solid #e10600 !important;
+  border-radius: 2px;
+  transform: skewX(-12deg);
+  margin-left: 0.5rem;
+}
+
+.btn-nav-login span,
+.btn-nav-registro span {
+  display: inline-block;
+  transform: skewX(12deg);
+}
+
+.btn-nav-registro {
+  background: #e10600;
+}
+
+.btn-nav-registro:hover {
+  background: #ff1e1e;
+  color: #fff !important;
+}
+
+.btn-logout {
+  background: transparent;
+  border: 2px solid #ffffff33;
+  color: #ffffff;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  padding: 0.5rem 1.2rem;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-logout:hover {
+  border-color: #e10600;
+  color: #e10600;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 0.25rem;
+  }
+  .nav-links a {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.6rem;
+  }
+}

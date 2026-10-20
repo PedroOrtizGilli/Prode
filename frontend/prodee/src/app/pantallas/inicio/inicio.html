@@ -1,0 +1,40 @@
+<div class="hero-acciones">
+    <a routerLink="/crear" class="btn-hero btn-hero-crear">Crear</a>
+    <a routerLink="/unirse" class="btn-hero btn-hero-unirse">Unirse</a>
+</div>
+
+<section class="noticias-section">
+  <h2 class="noticias-titulo">Últimas noticias</h2>
+
+  <div class="noticias-grid">
+    <a
+      class="noticia-card"
+      *ngFor="let noticia of noticias(); trackBy: trackByNoticia"
+      [href]="noticia.url"
+      target="_blank"
+      rel="noopener"
+    >
+      <img [src]="noticia.imagen" [alt]="noticia.titulo" class="noticia-img" />
+      <div class="noticia-contenido">
+        <span class="noticia-fuente">{{ noticia.fuente }}</span>
+        <h3 class="noticia-card-titulo">{{ noticia.titulo }}</h3>
+        <p class="noticia-resumen">{{ noticia.resumen }}</p>
+        <span class="noticia-fecha">{{ noticia.fecha }}</span>
+      </div>
+    </a>
+  </div>
+
+  <p class="noticias-cargando" *ngIf="cargando()">Cargando noticias...</p>
+
+  <button
+    class="btn-cargar-mas"
+    *ngIf="hayMas() && !cargando()"
+    (click)="cargarNoticias()"
+  >
+    Cargar más
+  </button>
+
+  <p class="noticias-fin" *ngIf="!hayMas() && noticias().length > 0">
+    No hay más noticias por ahora.
+  </p>
+</section>
