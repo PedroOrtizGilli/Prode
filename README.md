@@ -21,9 +21,8 @@ Aplicación para armar y gestionar **pronósticos de carreras de Fórmula 1** en
 
 ## 🏗️ Arquitectura
 
-├── frontend/ # SPA con Angular
-└── backend/
-└── prode-api/ # API REST (Node.js)
+| frontend | Angular |
+| backend | Nest.Js |
 
 ### Fuentes de datos
 
