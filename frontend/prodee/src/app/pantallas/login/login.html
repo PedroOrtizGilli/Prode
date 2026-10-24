@@ -1,0 +1,20 @@
+<div>
+    <div class="login-container">
+        <div class="login-form">
+            <h2>Iniciar sesión</h2>
+            <div class="form-group">
+
+                <input type="text" formControlName="username" id="username" placeholder="Nombre de usuario">
+                <div *ngIf="loginForm.get('username')?.touched && loginForm.get('username')?.errors" class="mensaje-error">
+                    <small *ngIf="loginForm.get('username')?.hasError('required')">El nombre de usuario es obligatorio</small>
+                </div>
+
+                <input type="password" formControlName="password" id="password" placeholder="Contraseña">
+                <div *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.errors" class="mensaje-error">
+                    <small *ngIf="loginForm.get('password')?.invalid">La contraseña es incorrecta</small>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
